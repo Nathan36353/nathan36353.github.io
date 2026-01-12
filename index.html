@@ -6,9 +6,21 @@
 </head>
 <body>
     <h1>Welcome to My Arcane Portal</h1>
+
     <p>
         This portal is the beginning of my journey into computer graphics.
-        Here I will explore structure, style, and visual magic through code.
+        Click the button below to cast your first spell.
     </p>
+
+    <button onclick="castSpell()">Click to Cast a Spell!</button>
+
+    <p id="spellResult"></p>
+
+    <script>
+        function castSpell() {
+            document.getElementById("spellResult").innerText =
+                "Your spell has been cast successfully!";
+        }
+    </script>
 </body>
 </html>
