@@ -1,9 +1,24 @@
 html, body {
-    overflow: visible;
-    width: 100%;
-    height: 100%;
     margin: 0;
     padding: 0;
     background-color: #003865;
     color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    padding: 24px;
+}
+
+button {
+    margin-top: 18px;
+    padding: 12px 18px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#spellResult {
+    margin-top: 16px;
+    font-size: 18px;
+    font-weight: bold;
 }
