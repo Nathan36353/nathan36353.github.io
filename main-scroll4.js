@@ -1,6 +1,6 @@
-import Renderer from "/lib/Viz/2DRenderer.js";
-import Camera from "/lib/Viz/Camera.js";
-import Camera2DVertexObject from "/lib/Scene/Camera2DVertexObject.js";
+import Renderer from "./lib/Viz/2DRenderer.js";
+import Camera from "./lib/Viz/Camera.js";
+import Camera2DVertexObject from "./lib/Scene/Camera2DVertexObject.js";
 
 function mouseToNDC(e) {
   const x = (e.clientX / window.innerWidth) * 2 - 1;
@@ -22,7 +22,7 @@ async function init() {
     renderer._canvasFormat,
     camera._pose,
     new Float32Array([0, 0.5, -0.5, 0, 0.5, 0]),
-    "/lib/Shaders/cameraView.wgsl",
+    "./lib/Shaders/cameraView.wgsl",
     "triangle-list"
   );
   await renderer.appendSceneObject(triangle);

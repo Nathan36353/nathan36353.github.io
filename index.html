@@ -1,15 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Arcane Portal</title>
+  <title>Arcane Portal – Projects</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="icon" href="data:," type="image/x-icon">
+  <style>
+    body.project-hub {
+      overflow: auto;
+      display: block;
+      height: auto;
+      min-height: 100vh;
+      place-content: unset;
+      background: linear-gradient(180deg, #0a1628 0%, #0d2137 50%, #0a1628 100%);
+      color: #e0e8f0;
+      font-family: system-ui, -apple-system, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      box-sizing: border-box;
+    }
+    .hub-container {
+      max-width: 32rem;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+    .hub-title {
+      font-size: 1.75rem;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      color: #fff;
+    }
+    .hub-subtitle {
+      text-align: center;
+      color: #8ba3b8;
+      margin-bottom: 2.5rem;
+      font-size: 0.95rem;
+    }
+    .hub-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .hub-list li {
+      margin-bottom: 0.75rem;
+    }
+    .hub-list a {
+      display: block;
+      padding: 1rem 1.25rem;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      color: #e0e8f0;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .hub-list a:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    .hub-list a:active {
+      background: rgba(255, 255, 255, 0.08);
+    }
+  </style>
 </head>
-<body>
-  <!-- Scroll 6. For sealed: main.min.js -->
-  <script type="module" src="main.min.js"></script>
+<body class="project-hub">
+  <div class="hub-container">
+    <h1 class="hub-title">Arcane Portal</h1>
+    <p class="hub-subtitle">Computer Graphics Wizard Academy – click a project to open it</p>
+    <!-- To add a new project: create a new .html that loads your main-*.js, then add a line below: -->
+    <!-- <li><a href="your-project.html">Your Project Name</a></li> -->
+    <ul class="hub-list">
+      <li><a href="demo.html">Orbiting Planets Demo</a></li>
+      <li><a href="scroll4.html">Scroll 4 – MVP Camera &amp; Interaction</a></li>
+      <li><a href="scroll5.html">Scroll 5 – Grid &amp; Game of Life</a></li>
+      <li><a href="scroll6.html">Scroll 6 – Particle System</a></li>
+      <li><a href="quest3.html">Quest 3 – Game of Life 256×256</a></li>
+    </ul>
+  </div>
 </body>
 </html>

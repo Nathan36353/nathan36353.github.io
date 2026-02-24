@@ -1,5 +1,5 @@
-import Renderer from "/lib/Viz/2DRenderer.js";
-import ParticleSystemObject from "/lib/Scene/ParticleSystemObject.js";
+import Renderer from "./lib/Viz/2DRenderer.js";
+import ParticleSystemObject from "./lib/Scene/ParticleSystemObject.js";
 
 async function init() {
   const canvasTag = document.createElement("canvas");
@@ -12,7 +12,7 @@ async function init() {
   const particles = new ParticleSystemObject(
     renderer._device,
     renderer._canvasFormat,
-    "/lib/Shaders/particles.wgsl",
+    "./lib/Shaders/particles.wgsl",
     4096
   );
   await renderer.appendSceneObject(particles);

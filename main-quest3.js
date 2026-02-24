@@ -1,8 +1,8 @@
-import Renderer from "/lib/Viz/2DRenderer.js";
-import Camera from "/lib/Viz/Camera.js";
-import PGA2D from "/lib/PGA2D.js";
-import QuestGridObject, { GRID_SIZE } from "/lib/Scene/QuestGridObject.js";
-import StandardTextObject from "/lib/Scene/StandardTextObject.js";
+import Renderer from "./lib/Viz/2DRenderer.js";
+import Camera from "./lib/Viz/Camera.js";
+import PGA2D from "./lib/PGA2D.js";
+import QuestGridObject, { GRID_SIZE } from "./lib/Scene/QuestGridObject.js";
+import StandardTextObject from "./lib/Scene/StandardTextObject.js";
 
 function mouseToNDC(e) {
   const x = (e.clientX / window.innerWidth) * 2 - 1;
@@ -50,7 +50,7 @@ async function init() {
     renderer._canvasFormat,
     camera._pose,
     quadVertices,
-    "/lib/Shaders/questGrid.wgsl",
+    "./lib/Shaders/questGrid.wgsl",
     "line-strip",
     GRID_SIZE * GRID_SIZE
   );
