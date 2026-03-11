@@ -1,0 +1,8 @@
+# Simple axis-aligned box polygon in 2D
+# Each line after this is "x y". Last vertex repeats the first.
+-0.5 -0.5
+0.5 -0.5
+0.5 0.5
+-0.5 0.5
+-0.5 -0.5
+

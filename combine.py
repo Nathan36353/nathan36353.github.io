@@ -14,11 +14,18 @@ def resolve_path(import_path, from_file, root_dir):
     path = import_path.strip('"\'')
     if path.startswith('/'):
         path = path[1:]
-    path = path.lstrip('./')
     base = os.path.dirname(from_file)
-    if not path.startswith('lib'):
+    if path.startswith('..'):
         path = os.path.normpath(os.path.join(base, path))
-    return os.path.normpath(os.path.join(root_dir, path)) if root_dir else path
+    else:
+        path = path.lstrip('./')
+        if path and not path.startswith('lib'):
+            path = os.path.normpath(os.path.join(base, path))
+    if root_dir:
+        if os.path.isabs(path):
+            return os.path.normpath(path)
+        return os.path.normpath(os.path.join(root_dir, path))
+    return os.path.normpath(path)
 
 def collect_imports(content):
     """Return list of (module_spec, path) from import statements."""
@@ -109,7 +116,7 @@ def main():
     for filepath in order:
         with open(filepath, 'r', encoding='utf-8') as f:
             content = f.read()
-        parts.append(strip_imports_and_export(content, use_optimized_wgsl=True))
+        parts.append(strip_imports_and_export(content, use_optimized_wgsl=False))
 
     combined = '\n\n'.join(parts)
     with open(out_path, 'w', encoding='utf-8') as f:

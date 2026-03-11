@@ -23,6 +23,7 @@ ENTRIES = [
     ('main-scroll4.js', 'scroll4.min.js'),
     ('main-scroll5.js', 'scroll5.min.js'),
     ('main-scroll6.js', 'scroll6.min.js'),
+    ('main-scroll8.js', 'scroll8.min.js'),
     ('main-scroll7.js', 'scroll7.min.js'),
     ('main-quest3.js', 'quest3.min.js'),
     ('main-quest4.js', 'quest4.min.js'),
